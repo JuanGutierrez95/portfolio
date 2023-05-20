@@ -1,10 +1,8 @@
 import Head from "next/head";
-import Navbar from "../../components/Navbar";
-
-import CenterSide from "../../components/CenterSide";
-import LeftSide from "../../components/LeftSide";
-import ScrollToTopButton from "../../components/ScrollToTopButton";
-
+import Navbar from "../components/Navbar";
+import LeftSide from "../components/LeftSide";
+import ScrollToTopButton from "../components/ScrollToTopButton";
+import {motion} from "framer-motion";
 
 export default function Home() {
   return (
@@ -15,18 +13,22 @@ export default function Home() {
         <meta name="viewport" content="width-device-width, initial-scale-1" />
         <link rel="icon" href="favcon.ico" />
       </Head>
-      <main className="w-full h-screen font-montserrat bg-bodyColor text-textLight 
-      overflow-x-hidden overflow-y-scroll" >
-        <Navbar/>
-        <div className="w-full h-[88vh] xl:flex items-center gap-20 justify-between" >
-          <div>
-            <LeftSide/>
-          </div>
-          <div>
-            <CenterSide/>
-          </div>
-          <div>
-            <ScrollToTopButton/>
+      <main
+        className="w-full h-screen font-montserrat bg-bodyColor text-textLight 
+      overflow-x-hidden overflow-y-scroll"
+      >
+        <Navbar />
+        <div className="w-full h-[88vh] xl:flex items-center gap-20 justify-between">
+          <motion.div 
+          initial={{ y: -10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.4 }}
+          className="hidden xl:inline-flex w-32 h-full fixed left-0 bottom-0">
+            <LeftSide />
+          </motion.div>
+          <div className="h-[88vh] mx-auto p-4">Center</div>
+          <div className="hidden xl:inline-flex w-32 h-full fixed right-0 bottom-0">
+            <ScrollToTopButton />
           </div>
         </div>
       </main>

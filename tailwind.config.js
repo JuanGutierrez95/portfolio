@@ -1,23 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      maxWidth:{
+      maxWidth: {
         container: "1440px",
         contentContainer: "1140px",
         containerSmall: "1024px",
-        containerxs:"768px",
+        containerxs: "768px",
       },
       animation: {
-        'bounce-slow': 'bounce 2s infinite',
+        "bounce-slow": "bounce 5s infinite",
       },
       screens: {
         xs: "320px",
@@ -45,7 +45,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-   
-  ],
+  plugins: [],
 };

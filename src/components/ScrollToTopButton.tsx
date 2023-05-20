@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import { flecha } from "../public/assets";
+import { flecha } from "../../public/assets";
 
 const ScrollToTopButton = () => {
     const [isHovered, setIsHovered] = useState(false);
@@ -21,7 +21,7 @@ const ScrollToTopButton = () => {
     };
   
     return (
-        <div className="fixed bottom-4 right-7">
+        <div className="fixed bottom-4 right-6">
           <button
             className="p-2 rounded-full text-sm"
             onClick={handleButtonClick}
